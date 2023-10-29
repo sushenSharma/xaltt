@@ -1,5 +1,7 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
+import Rain from 'react-rain-animation';
+import 'react-rain-animation/lib/style.css'; // Don't forget to import the CSS style
 
 const fadeIn = keyframes`
   0% { opacity: 0; }
@@ -11,17 +13,22 @@ const WelcomeContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f0f0f0;
+  background-color: #94618E; // Dark background
+  position: relative; // To ensure rain effect is behind the text
+  overflow: hidden;
 `;
 
 const WelcomeText = styled.h1`
   font-size: 2.5rem;
+  color: #FFF; // White text to be visible on dark background
   animation: ${fadeIn} 2s ease-in-out;
+  z-index: 10; // Ensure text is above rain
 `;
 
 const Welcome = () => {
   return (
     <WelcomeContainer>
+      <Rain />
       <WelcomeText>Welcome to Xaltt</WelcomeText>
     </WelcomeContainer>
   );
