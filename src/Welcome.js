@@ -25,7 +25,7 @@ const WelcomeText = styled.h1`
   z-index: 10; // Ensure text is above rain
 `;
 
-const Welcome = () => {
+const welcome = () => {
   return (
     <WelcomeContainer>
       <Rain />
@@ -34,4 +34,4 @@ const Welcome = () => {
   );
 }
 
-export default Welcome;
+export default welcome;
