@@ -20,7 +20,7 @@ const WelcomeContainer = styled.div`
 
 const WelcomeText = styled.h1`
   font-size: 2.5rem;
-  color: #FFF; // White text to be visible on dark background
+  color: #FFF;
   animation: ${fadeIn} 2s ease-in-out;
   z-index: 10; // Ensure text is above rain
 `;
