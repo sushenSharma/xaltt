@@ -1,0 +1,214 @@
+/* LandingPage.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .landing-page {
+    color: white;
+    background-color: #5D54A4; /* A similar purple tone */
+    overflow-x: hidden;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    animation: fadeInDown 1s ease-out forwards;
+  }
+  
+  .logo {
+    font-weight: bold;
+  }
+  
+  .menu a {
+    text-decoration: none;
+    color: white;
+    margin: 0 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .menu a:hover {
+    color: #EF476F; /* Pink highlight on hover */
+  }
+  
+  .sign-in {
+    background-color: #4C5270; /* Darker shade for the button */
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .sign-in:hover {
+    background-color: #EF476F; /* Pink background on hover */
+  }
+  
+  header {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  header h1 {
+    margin-top: 2rem;
+    font-size: 2.5rem;
+    animation: fadeInUp 1s ease-out 0.5s forwards;
+    opacity: 0;
+  }
+  
+  header p {
+    margin: 0.5rem 0;
+    animation: fadeInUp 1s ease-out 0.7s forwards;
+    opacity: 0;
+  }
+  
+  .get-started {
+    background-color: #EF476F; /* Pink button */
+    border: none;
+    color: white;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 2rem;
+    animation: scaleIn 0.5s ease-out 1s forwards;
+    opacity: 0;
+  }
+  
+  .abstract-shape {
+    width: 200px;
+    height: 200px;
+    background-color: pink; /* Placeholder color */
+    margin: 2rem auto;
+    animation: fadeIn 2s ease-out 1.2s forwards;
+    opacity: 0;
+  }
+  
+  /* Animations */
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .logo {
+    font-size: 2rem;
+    color: #EF476F; /* Pink color for brand accent */
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Cool effect for the main heading */
+  header h1 {
+    color: #ffffff;
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: 1px; /* Spacing out letters for effect */
+    text-transform: uppercase;
+    background-image: linear-gradient(to right, #EF476F, #ffd166, #06d6a0, #118ab2);
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: shine 3s ease-in-out infinite alternate;
+  }
+  
+  /* Subheading with different font-weight and styling */
+  header p {
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: #ddd;
+    margin-bottom: 2rem;
+  }
+  
+  /* Button with a cool hover effect */
+  .get-started {
+    /* ... existing styles ... */
+    border: 2px solid transparent;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  
+  .get-started:hover {
+    background-color: transparent;
+    color: #EF476F;
+    border-color: #EF476F;
+    transform: scale(1.05);
+  }
+  
+  /* Keyframes for the shine effect */
+  @keyframes shine {
+    from {
+      text-shadow: 0 0 10px #EF476F, 0 0 20px #EF476F, 0 0 30px #EF476F, 0 0 40px #EF476F, 0 0 50px #EF476F, 0 0 60px #EF476F, 0 0 70px #EF476F;
+    }
+    to {
+      text-shadow: 0 0 20px #ffd166, 0 0 30px #ffd166, 0 0 40px #ffd166, 0 0 50px #ffd166, 0 0 60px #ffd166, 0 0 70px #ffd166, 0 0 80px #ffd166;
+    }
+  }
+  .features {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 4rem 0;
+  }
+  
+  .feature-item {
+    background: #ffffff; /* Light background for the panel */
+    color: #333; /* Dark text color for readability */
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Fixed width for each panel */
+    margin: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .feature-item h2 {
+    color: #EF476F; /* Pink color for headings */
+    margin-bottom: 1rem;
+  }
+  
+  .feature-item p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  

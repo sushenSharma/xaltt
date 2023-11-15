@@ -1,31 +1,18 @@
+// src/App.js
+
 import React from 'react';
 import './App.css';
-import Welcome from './welcome';
-import DestinationPage from './destinationPage';
-import SourcePage  from './SourcePage';
-import { animated, useSpring } from 'react-spring';
+import LandingPage from './Components/LandingPage/LandingPage';
 
-
-import {
- Link,NavLink
-} from "react-router-dom";
-
-function App() {
-  const fadeIn = useSpring({
-    from: { opacity: 0 },
-    to: { opacity: 1 },
-    delay: 200, // Delay the animation by 200ms
-  });
+const App = () => {
+  const handleNavigate = () => {
+    // Logic to navigate to the next step
+    console.log("Navigate to the next step");
+  };
 
   return (
-    <div>
-      <animated.div style={fadeIn}>
-        <Welcome />
-      </animated.div>
-      <animated.div style={fadeIn}>
-        <SourcePage></SourcePage>
-        <DestinationPage />
-      </animated.div>
+    <div className="App">
+      <LandingPage onNavigate={handleNavigate} />
     </div>
   );
 }
